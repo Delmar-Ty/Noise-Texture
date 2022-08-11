@@ -3,9 +3,11 @@ const c = canvas.getContext('2d');
 canvas.width = innerWidth;
 canvas.height = innerHeight;
 const noiseDims = {
-    x: 200,
-    y: 200
+    x: 0,
+    y: 0
 }
+noiseDims.x = Number(prompt('Enter an X dimension for the noise texture'));
+noiseDims.y = Number(prompt('Enter an Y dimension for the noise texture'));
 let makeAnimate = Number(prompt('Do you wish to animate the noise texture? (true: 1 / false: 0)'));
 (makeAnimate)? makeAnimate = true: makeAnimate = false;
 console.log(typeof(makeAnimate), makeAnimate);
